@@ -1,0 +1,7 @@
+.img {
+  filter: invert(1);
+}
+
+.img:hover {
+  filter: invert(0);
+}
