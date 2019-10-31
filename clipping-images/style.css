@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.image {
+  padding: 30px;
+}
+
+.image__img {
+  /* circle(radius relative to width at x y) */
+  /* clip-path: circle(100% at 50% 50%); */
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 75%,
+    75% 75%,
+    75% 100%,
+    50% 75%,
+    0% 75%
+  );
+}
