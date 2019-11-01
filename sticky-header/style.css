@@ -1,0 +1,28 @@
+:root {
+  --header-height: 200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  margin: 0;
+}
+
+.header {
+  display: inline-flex;
+  width: 100%;
+  background-color: lightsalmon;
+  height: var(--header-height);
+  align-items: center;
+  position: fixed;
+  top: 0;
+  opacity: 0.9;
+  z-index: 99;
+}
+
+.main {
+  margin-top: var(--header-height);
+  padding: 20px 0;
+}
