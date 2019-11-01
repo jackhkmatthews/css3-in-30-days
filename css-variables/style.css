@@ -1,0 +1,35 @@
+.body {
+  --primary-color: orangered;
+  --secondary-color: hotpink;
+  --base-measurement: 20px;
+  --box-size-2: 300px;
+  --text-color: #f3f3f3;
+  --primary-font-family: "Alegreya", serif;
+  --base-font-size: 30px;
+}
+
+.box {
+  margin: var(--base-measurement);
+  display: inline-flex;
+  align-items: center;
+}
+
+.box--1 {
+  height: var(--box-size-1, calc(var(--base-measurement) * 10));
+  width: var(--box-size-1, calc(var(--base-measurement) * 10));
+  background-color: var(--primary-color);
+}
+
+.box--2 {
+  height: var(--box-size-2, calc(var(--base-measurement) * 10));
+  width: var(--box-size-2, calc(var(--base-measurement) * 10));
+  background-color: var(--secondary-color);
+}
+
+.box__copy {
+  font-family: var(--primary-font-family);
+  font-size: var(--base-font-size);
+  color: var(--text-color);
+  width: 100%;
+  text-align: center;
+}
