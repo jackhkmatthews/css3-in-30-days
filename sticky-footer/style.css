@@ -1,0 +1,38 @@
+:root {
+  --footer-height: 120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-content {
+  min-height: 100%;
+  margin-bottom: calc(var(--footer-height) * -1);
+}
+
+.page-content::after {
+  content: "";
+  display: block;
+}
+
+.header {
+  display: inline-block;
+  width: 100%;
+}
+
+.footer,
+.page-content::after {
+  height: var(--footer-height);
+}
+
+.footer {
+  background-color: lightgray;
+  padding-top: 20px;
+}
