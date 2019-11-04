@@ -1,0 +1,101 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.tooltip {
+  margin: 50px;
+  position: relative;
+  height: 60px;
+  background: papayawhip;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.tooltip::before {
+  position: absolute;
+  z-index: 2;
+  display: none;
+  padding: 10px;
+  font-size: 0.8em;
+  line-height: 1.4rem;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  content: attr(title);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  text-align: center;
+}
+
+.tooltip--top::before {
+  bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip--left::before {
+  top: 50%;
+  right: calc(100% + 5px);
+  transform: translateY(-50%);
+}
+
+.tooltip--right::before {
+  top: 50%;
+  left: calc(100% + 5px);
+  transform: translateY(-50%);
+}
+
+.tooltip:hover::before {
+  display: inline-block;
+}
+
+.tooltip::after {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  width: 0;
+  height: 0;
+  border: 5px solid transparent;
+  content: "";
+}
+
+.tooltip--top::after {
+  border-top-color: rgba(0, 0, 0, 0.8);
+  bottom: calc(100% - 5px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip--left::after {
+  border-left-color: rgba(0, 0, 0, 0.8);
+  top: 50%;
+  right: calc(100% - 5px);
+  transform: translateY(-50%);
+}
+
+.tooltip--right::after {
+  border-right-color: rgba(0, 0, 0, 0.8);
+  top: 50%;
+  left: calc(100% - 5px);
+  transform: translateY(-50%);
+}
+
+.tooltip:hover::after {
+  display: inline-block;
+}
+
+.tooltip__copy {
+  line-height: 60px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}

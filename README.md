@@ -10,3 +10,4 @@ Code examples following [Free Code Camp's youtube playlist](https://www.youtube.
 - the `~` selector lets you toggle styles of any following sibling based on the state of sibling
 - overlays are always there but with `pointer-events: none` and `opacity: 0`.
 - border shapes can come in very handy. Think in terms of border top, left, etc and then making one or more `transparent`.
+- `*` doesn't select sudo elements.
