@@ -12,3 +12,4 @@ Code examples following [Free Code Camp's youtube playlist](https://www.youtube.
 - border shapes can come in very handy. Think in terms of border top, left, etc and then making one or more `transparent`.
 - `*` doesn't select sudo elements.
 - can achieve a lot of repeating patterns with `background-image`, `background-size` and `background-position`
+- clip path is a powerful tool
