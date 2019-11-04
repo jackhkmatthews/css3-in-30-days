@@ -1,0 +1,70 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.animation-bar {
+  position: relative;
+  display: block;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 1);
+}
+
+.animation-bar__inner {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  border-radius: 10px 0 0 10px;
+  overflow: hidden;
+  background-color: #f56982;
+  background-size: 100%;
+  background-image: linear-gradient(to bottom, #f2395a, #b90c2b);
+  animation: progress-bar 2s linear infinite;
+}
+
+.animation-bar__inner::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: "";
+  background-size: 30px 30px;
+  background-image: linear-gradient(
+    45deg,
+    #fff 25%,
+    rgba(0, 0, 0, 0) 25%,
+    rgba(0, 0, 0, 0) 50%,
+    #fff 50%,
+    #fff 75%,
+    rgba(0, 0, 0, 0) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 0.3;
+  animation: progress-bar-after 0.5s infinite linear;
+}
+
+@keyframes progress-bar {
+  0%,
+  100% {
+    width: 20%;
+  }
+  50% {
+    width: 60%;
+  }
+}
+
+@keyframes progress-bar-after {
+  0% {
+    background-position: 0 100%;
+  }
+  100% {
+    background-position: 30px 100%;
+  }
+}
