@@ -4,7 +4,7 @@ Code examples following [Free Code Camp's youtube playlist](https://www.youtube.
 
 ## Learnings
 
-- CSS variable funcitons take an option second argument to be used as a fallback
+- CSS variable functions take an option second argument to be used as a fallback
 - unlike fixed elements who's dimensions are relative to the viewport, sticky positioned element's dimensions are relative to their parents e.g. `width: 100%` and `height: 100%` are relative to parent and not viewport.
 - `position: sticky` works well with `display: grid`
 - the `~` selector lets you toggle styles of any following sibling based on the state of sibling
