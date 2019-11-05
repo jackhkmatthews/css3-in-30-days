@@ -18,3 +18,4 @@ Code examples following [Free Code Camp's youtube playlist](https://www.youtube.
 - `box-shadow: inset` can be used to interesting effect
 - can use `:target` selector to target elements which match the fragment in the URL. e.g. `href="#tab2"` and `#tab2:target`
 - can apply multiple `box-shadows` with a comma seperated list
+- `@supports` can be useful for browser compatability issues
