@@ -1,0 +1,83 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.accordion {
+  position: relative;
+  display: block;
+  background-color: white;
+  border: solid 1px #e0e0e0;
+}
+
+.accordion__item {
+  display: block;
+}
+
+.accordion__trigger {
+  text-decoration: none;
+  position: relative;
+  margin: 0;
+  padding: 10px;
+  font-size: 1em;
+  background: #00b3b4;
+  color: white;
+  border: solid 1px #379aa4;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset,
+    0 -1px 0 rgba(255, 255, 255, 0.1) inset, 0 4px 0 #338a94,
+    0 4px 2px rgba(0, 0, 0, 0.5);
+}
+
+.accordion__trigger--open {
+  display: block;
+}
+
+.accordion__item:target .accordion__trigger--open {
+  display: none;
+}
+
+.accordion__trigger--close {
+  display: none;
+}
+
+.accordion__item:target .accordion__trigger--close {
+  display: block;
+}
+
+.accordion__trigger:hover {
+  background-color: #0bbfc0;
+}
+
+.accordion__trigger::after {
+  position: absolute;
+  content: "";
+  right: 20px;
+  width: 7px;
+  height: 7px;
+  border-left: solid 2px white;
+  border-bottom: solid 2px white;
+  top: 50%;
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+.accordion__item:target .accordion__trigger::after {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.accordion__content {
+  display: block;
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease, padding 0.5s linear;
+}
+
+.accordion__item:target .accordion__content {
+  height: 150px;
+}
+
+.accordion__copy {
+  padding: 20px;
+  margin: 0;
+}
