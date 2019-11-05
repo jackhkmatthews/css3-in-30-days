@@ -1,0 +1,69 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+.body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.layers {
+  position: relative;
+  height: 640px;
+  width: 360px;
+}
+
+.layer {
+  position: absolute;
+  max-width: 100%;
+  height: 100%;
+  transition: all ease 1600ms;
+  /* create 3d context */
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    translateX(0) translateY(0) translateZ(0);
+}
+
+.layers:hover .layer--back {
+  transform: perspective(1000px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+    translateX(35px) translateY(0) translateZ(180px);
+}
+
+.layer--mid {
+  width: 320px;
+  left: 20px;
+}
+
+.layers:hover .layer--mid {
+  transform: perspective(1000px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+    translateX(35px) translateY(0) translateZ(200px);
+}
+
+.layer--top {
+  width: 300px;
+  left: 30px;
+  top: -5px;
+}
+
+.layers:hover .layer--top {
+  transform: perspective(1000px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+    translateX(35px) translateY(0) translateZ(220px);
+}
+
+.layer--tippytop {
+  width: 280px;
+  left: 40px;
+  transform: perspective(1000px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    translateX(0) translateY(-150px) translateZ(0);
+}
+
+.layers:hover .layer--tippytop {
+  transform: perspective(1000px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+    translateX(35px) translateY(-150px) translateZ(240px);
+}
